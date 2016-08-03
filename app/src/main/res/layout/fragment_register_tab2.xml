@@ -1,0 +1,491 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tny.khondedriver.register_tab2"
+    android:background="#fff1f1f1"
+    android:fillViewport="false">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/truck_detail_layout"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="80dp"
+                android:animateLayoutChanges="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="ข้อมูลรถ"
+                    android:id="@+id/truck_detail_label"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/ColorPrimary" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/truck_detail_label"
+                    android:id="@+id/truck_license_layout">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edittext_license_plate"
+                        android:hint="ทะเบียนรถ [กก 1234]"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_below="@+id/driver_detail_label"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/register_edittext" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/truck_license_province_layout"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:layout_below="@+id/truck_license_layout"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:onClick="selectTruckChoice">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="ทะเบียนจังหวัด"
+                        android:id="@+id/textView15"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกจังหวัด"
+                        android:id="@+id/truck_license_province_label"
+                        android:layout_below="@+id/textView15"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:layout_toStartOf="@+id/imageView35" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/imageView35"
+                        android:src="@drawable/spinner_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/truck_type_layout"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:layout_below="@+id/truck_license_province_layout"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:onClick="selectTruckChoice">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="ชนิดรถ"
+                        android:id="@+id/textView14"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกชนิดรถ"
+                        android:id="@+id/truck_type_label"
+                        android:layout_below="@+id/textView14"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:layout_toStartOf="@+id/imageView34" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/imageView34"
+                        android:src="@drawable/spinner_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/trunk_width_layout"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:layout_below="@+id/roof_type_layout"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:onClick="selectTruckChoice"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="ความยาวกระบะท้าย"
+                        android:id="@+id/textView12"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกความยาวกระบะท้าย"
+                        android:id="@+id/trunk_width_label"
+                        android:layout_below="@+id/textView12"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:layout_toStartOf="@+id/imageView32" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/imageView32"
+                        android:src="@drawable/spinner_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/max_weight_layout"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+                    android:layout_below="@+id/trunk_width_layout"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:onClick="selectTruckChoice"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="น้ำหนักบรรทุก เฉพาะสินค้า"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:id="@+id/textView13"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกน้ำหนักบรรทุกสูงสุด"
+                        android:id="@+id/max_weight_label"
+                        android:layout_below="@+id/textView13"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:layout_toStartOf="@+id/imageView33" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/imageView33"
+                        android:src="@drawable/spinner_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roof_type_layout"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:background="#ffffff"
+                    android:padding="15dp"
+
+                    android:animateLayoutChanges="true"
+                    android:onClick="selectTruckChoice"
+                    android:layout_below="@+id/truck_type_layout"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="ชนิดตัวถัง/หาง"
+                        android:id="@+id/roof_type_label0"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#000000" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกชนิดตัวถัง/หาง"
+                        android:id="@+id/roof_type_label"
+                        android:layout_below="@+id/roof_type_label0"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textStyle="bold"
+                        android:textSize="16dp"
+                        android:layout_toStartOf="@+id/imageView31" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/imageView31"
+                        android:src="@drawable/spinner_arrow"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/extras_layout"
+                    android:layout_below="@+id/max_weight_layout"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="อุปกรณ์เสริม"
+                        android:id="@+id/extra_label"
+                        android:textColor="@color/ColorPrimary"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="10dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/extra_label"
+                        android:id="@+id/extra_radio_layout">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:orientation="vertical"
+                            android:id="@+id/extras_radio"
+                            android:background="#fff"
+                            android:paddingBottom="10dp">
+
+                            <RadioButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="ไม่มี"
+                                android:id="@+id/radioButton8"
+                                android:buttonTint="#3fb350"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:checked="true"
+                                android:textSize="16dp" />
+
+                            <RadioButton
+                                android:layout_width="326dp"
+                                android:layout_height="wrap_content"
+                                android:text="เฮี๊ยบเครน"
+                                android:id="@+id/radioButton9"
+                                android:buttonTint="#3fb350"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:textSize="16dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ดัมพ์"
+                                android:id="@+id/radioButton10"
+                                android:buttonTint="#3fb350"
+                                android:layout_weight=".5"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:textSize="16dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="หางไฮดรอลิก"
+                                android:id="@+id/radioButton11"
+                                android:buttonTint="#3fb350"
+                                android:layout_weight=".5"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:textSize="16dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ท้ายเป็ด"
+                                android:id="@+id/radioButton12"
+                                android:buttonTint="#3fb350"
+                                android:layout_weight=".5"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:textSize="16dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="เปิดข้าง"
+                                android:id="@+id/radioButton13"
+                                android:buttonTint="#3fb350"
+                                android:layout_weight=".5"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:textSize="16dp" />
+
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="เพลาลอยบรรทุกหนัก"
+                                android:id="@+id/radioButton14"
+                                android:buttonTint="#3fb350"
+                                android:layout_weight=".5"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"
+                                android:textSize="16dp" />
+                        </RadioGroup>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/out_country_layout"
+                    android:layout_below="@+id/extras_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="รถออกนอกประเทศได้หรือไม่"
+                        android:id="@+id/out_country_label"
+                        android:textColor="@color/ColorPrimary"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="10dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/out_country_layout"
+                    android:id="@+id/out_country_radio_layout" >
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/register_edittext"
+                        android:padding="10dp"
+                        android:id="@+id/radio_out_country"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ได้"
+                            android:id="@+id/radio_out_country_yes"
+                            android:textSize="16dp"
+                            android:buttonTint="#3fb350" />
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ไม่ได้"
+                            android:id="@+id/radio_out_country_no"
+                            android:textSize="16dp"
+                            android:buttonTint="#3fb350"
+                            android:layout_marginLeft="80dp"
+                            android:checked="true" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="ต่อไป"
+                android:id="@+id/button2"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:textColor="#ffffffff"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:onClick="goNext"
+                android:layout_margin="5dp" />
+
+        </RelativeLayout>
+    </ScrollView>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_login_page"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2"
+        android:fillViewport="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30sp"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameEditText"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/register_edittext"
+                android:hint="เบอร์โทรศัพท์"
+                android:layout_below="@+id/imageView7"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="15sp"
+                android:layout_height="15sp"
+                android:id="@+id/imageView2"
+                android:src="@drawable/phone_icon"
+                android:layout_alignBottom="@+id/nameEditText"
+                android:layout_alignEnd="@+id/nameEditText"
+                android:layout_alignTop="@+id/nameEditText"
+                android:layout_marginRight="15dp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:paddingLeft="10dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/register_edittext"
+                android:id="@+id/passwordEditText"
+                android:layout_below="@+id/imageView2"
+                android:layout_alignParentStart="true"
+                android:hint="รหัสผ่าน"
+                android:layout_alignEnd="@+id/nameEditText" />
+
+            <Button
+                android:layout_width="150sp"
+                android:layout_height="60sp"
+                android:text="เข้าสู่ระบบ"
+                android:id="@+id/button"
+                android:layout_below="@+id/passwordEditText"
+                android:onClick="clickLogin"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:layout_marginTop="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#eeeeee"
+                android:layout_below="@+id/nameEditText"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/imageView7"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/khondedriver_logo" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

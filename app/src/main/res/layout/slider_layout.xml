@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/newbid_layout">
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:minWidth="300dp"
+            android:layout_centerHorizontal="true"
+            android:thumb="@drawable/customswitchselector"
+            android:progressDrawable="@drawable/custom_track"
+            android:progress="10"
+            android:splitTrack="false"
+            android:background="@null"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เลื่อนเมื่อมาถึงจุดรับของแล้ว"
+            android:id="@+id/textView10"
+            android:textSize="18dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#ff000000"
+            android:layout_centerVertical="true"
+            android:layout_alignEnd="@+id/seekBar" />
+
+    </RelativeLayout>
+
+</LinearLayout>

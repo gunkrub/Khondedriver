@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_login_page"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linearLayout">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/textView19"
+
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center_horizontal"
+                    android:background="#5ed884"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:onClick="startLoginActivity" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:id="@+id/textView20"
+                    android:layout_alignParentRight="false"
+                    android:layout_alignParentEnd="false"
+                    android:layout_alignTop="@+id/textView21" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="ถัดไป"
+                    android:id="@+id/textView21"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center_horizontal"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:textColor="#ff000000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:onClick="saveNameAndBirthday" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="30sp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/nameEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="50sp"
+            android:hint="ชื่อ นามสกุล"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="วันเกิด"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/nameEditText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#ff000000" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView2"
+                android:id="@+id/relativeLayoutbirthday">
+
+                <HorizontalScrollView
+                    android:scrollbars="none"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/horizontalScrollView" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <NumberPicker
+                            android:layout_width="40sp"
+                            android:layout_height="100sp"
+                            android:id="@+id/birthdate"
+                            android:layout_toRightOf="@+id/textView6"
+                            android:layout_toEndOf="@+id/textView6" >
+
+                            <NumberPicker
+                                android:layout_width="40sp"
+                                android:layout_height="100sp"
+                                android:id="@+id/birthdate2"
+                                android:layout_below="@+id/textView2"
+                                android:layout_toRightOf="@+id/textView6"
+                                android:layout_toEndOf="@+id/textView6" />
+                        </NumberPicker>
+
+                        <NumberPicker
+                            android:layout_width="40sp"
+                            android:layout_height="100sp"
+                            android:id="@+id/birthmonth2"
+                            android:layout_toRightOf="@+id/textView7"
+                            android:layout_toEndOf="@+id/textView7" >
+
+                            <NumberPicker
+                                android:layout_width="40sp"
+                                android:layout_height="100sp"
+                                android:id="@+id/birthmonth"
+                                android:layout_below="@+id/textView2"
+                                android:layout_toRightOf="@+id/textView7"
+                                android:layout_toEndOf="@+id/textView7" />
+                        </NumberPicker>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="วัน"
+                            android:id="@+id/textView6"
+                            android:layout_marginTop="38sp"
+                            android:textColor="#ff000000"
+                            android:layout_marginRight="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="เดือน"
+                            android:id="@+id/textView7"
+                            android:textColor="#ff000000"
+                            android:layout_alignTop="@+id/textView6"
+                            android:layout_toRightOf="@+id/birthdate"
+                            android:layout_toEndOf="@+id/birthdate"
+                            android:layout_marginLeft="30sp"
+                            android:layout_marginRight="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="ปี"
+                            android:id="@+id/textView9"
+                            android:textColor="#ff000000"
+                            android:layout_alignTop="@+id/textView7"
+                            android:layout_marginLeft="30sp"
+                            android:layout_marginRight="10sp" />
+
+                        <NumberPicker
+                            android:layout_width="60sp"
+                            android:layout_height="100sp"
+                            android:id="@+id/birthyear"
+                            android:layout_toRightOf="@+id/textView9"
+                            android:layout_toEndOf="@+id/textView9" >
+
+                            <NumberPicker
+                                android:layout_width="60sp"
+                                android:layout_height="100sp"
+                                android:id="@+id/birthyear2"
+                                android:layout_alignTop="@+id/birthmonth"
+                                android:layout_toRightOf="@+id/textView9"
+                                android:layout_toEndOf="@+id/textView9" />
+                        </NumberPicker>
+                    </RelativeLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

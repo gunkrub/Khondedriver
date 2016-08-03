@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tny.khondedriver.register_tab4"
+    android:background="#fff1f1f1"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView6"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#ffffff"
+        android:layout_above="@+id/linearLayout2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ข้อตกลงงงข้อตกลงงงข้อตกลงงงข้อตกลงงงข้อตกลงงงข้อตกลงงงข้อตกลงงงข้อตกลงงงข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\nข้อตกลงงง\n"
+                android:id="@+id/textView11"
+                android:layout_margin="10dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#bfbfbf"
+        android:layout_alignBottom="@+id/scrollView6"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radio_agreement"
+            android:text="คุณได้อ่านและยอมรับเงื่อนไขตามข้อกำหนดข้างต้นแล้ว"
+            android:textSize="18dp"
+            android:buttonTint="#3fb350"
+            android:layout_marginTop="10dp"
+            android:textColor="#757575"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="เสร็จสิ้น"
+            android:id="@+id/button3"
+            android:layout_alignParentBottom="true"
+            android:textColor="#ffffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            android:onClick="submitRegistration" />
+
+    </LinearLayout>
+
+</RelativeLayout>

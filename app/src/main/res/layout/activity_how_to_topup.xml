@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HowToTopupActivity"
+    android:clipToPadding="false">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_login_page"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView4"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:background="#ffffffff">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView12"
+                    android:src="@drawable/topup_icon_color"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="110dp"
+                    android:layout_marginLeft="110dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="หมายเหตุ\nเติมเงินได้ ครั้งละ 500 1,000 2,000 3,000 5,000 บาท"
+                    android:id="@+id/textView16"
+                    android:layout_below="@+id/imageView12"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18dp"
+                    android:textColor="#ff5353"
+                    android:layout_marginBottom="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1. โอนเงินเข้าสู่บัญชี"
+                    android:id="@+id/textView26"
+                    android:layout_below="@+id/textView16"
+                    android:textSize="18dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/howtotopup_layout2"
+                    android:layout_below="@+id/textView26"
+                    android:clipToPadding="false"
+                    android:background="#ffffff"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignStart="@+id/textView16"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ธนาคารกสิกรไทย\nเลขที่บัญชี xxxxxxxxxxxxxxx\nชื่อบัญชี TNY Co., Ltd."
+                        android:id="@+id/textView24"
+
+                        android:textSize="18dp"
+                        android:layout_marginBottom="5dp"
+                        android:elevation="2dp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginLeft="2dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2. ส่งรูปหลักฐานการโอนเงินมาที่ ปุ่มแจ้งเติมเงิน ด้านล่างนี้ เงินจะเข้าสู่แอพของท่านภายใน 30 นาที"
+                    android:id="@+id/textView25"
+                    android:textSize="18dp"
+                    android:layout_below="@+id/howtotopup_layout2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="15dp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="แจ้งเติมเงิน"
+                    android:id="@+id/button6"
+                    android:layout_below="@+id/textView25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:onClick="reportTransfer" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

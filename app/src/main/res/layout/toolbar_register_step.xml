@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorPrimary">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ขั้นตอนที่ 1"
+
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:id="@+id/register_step"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_step"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:id="@+id/dot_step1"
+            android:src="@drawable/dot_switcher_white"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:id="@+id/dot_step2"
+            android:src="@drawable/dot_switcher"
+            android:layout_toEndOf="@+id/dot_step1"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:id="@+id/dot_step3"
+            android:src="@drawable/dot_switcher"
+            android:layout_toEndOf="@+id/dot_step2"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:id="@+id/dot_step4"
+            android:src="@drawable/dot_switcher"
+            android:layout_toEndOf="@+id/dot_step3"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
+

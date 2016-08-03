@@ -1,0 +1,619 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tny.khondedriver.register_tab3"
+    android:background="#f1f1f1">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/photos_main_layout"
+            android:paddingTop="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ใส่รูปถ่าย"
+                android:id="@+id/add_photo_label"
+                android:textColor="@color/ColorPrimary"
+                android:layout_marginBottom="20dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/straight_photo_layout"
+                android:layout_below="@+id/add_photo_label"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="1. รูปหน้าตรง"
+                    android:id="@+id/straight_photo_label"
+                    android:textColor="@color/ColorPrimary"
+                    
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp" />
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_below="@+id/straight_photo_label"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/straight_photo_add"
+                    android:layout_toEndOf="@+id/straight_photo_image_layout"
+                    android:onClick="loadImagefromGallery">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView10"
+                        
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/textView12"
+                        android:layout_alignBottom="@+id/imageView10"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/straight_photo_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/straight_photo_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_straight_photo"
+                        android:layout_weight="0.5"
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/idcard_layout"
+                android:layout_below="@+id/straight_photo_layout"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/idcard_add"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_below="@+id/idcard_label"
+                    android:layout_toEndOf="@+id/idcard_image_layout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView9"
+                        
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/textView18"
+                        android:layout_alignBottom="@+id/imageView9"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="2. บัตรประชาชนคนขับ"
+                    android:id="@+id/idcard_label"
+                    android:textColor="@color/ColorPrimary"
+
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/idcard_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/idcard_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_idcard"
+                        android:layout_weight="0.5"
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/drivercard_layout"
+                android:layout_below="@+id/idcard_layout"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/drivercard_add"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_below="@+id/drivercard_label"
+                    android:layout_toEndOf="@+id/drivercard_image_layout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView11"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/textView19"
+                        android:layout_alignBottom="@+id/imageView11"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="3. ใบขับขี่คนขับ"
+                    android:id="@+id/drivercard_label"
+                    android:textColor="@color/ColorPrimary"
+
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/drivercard_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/drivercard_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_drivercard"
+                        android:layout_weight="0.5"
+                        
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/licensebook_layout"
+                android:layout_below="@+id/drivercard_layout"
+                
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/licensebook_add"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_below="@+id/licensebook_label"
+                    android:layout_toEndOf="@+id/licensebook_image_layout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView8"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/textView17"
+                        android:layout_alignBottom="@+id/imageView8"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="4. ใบคู่มือจดทะเบียน (เล่มรถ)"
+                    android:id="@+id/licensebook_label"
+                    android:textColor="@color/ColorPrimary"
+
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/licensebook_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/licensebook_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_licensebook"
+                        android:layout_weight="0.5"
+                        android:layout_alignParentTop="true"
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/insurancepaper_layout"
+                android:layout_below="@+id/licensebook_layout"
+
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/insurancepaper_add"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_below="@+id/insurancepaper_label"
+                    android:layout_toEndOf="@+id/insurancepaper_image_layout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addicon_insurancepaper"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/addlabel_insurancepaper"
+                        android:layout_alignBottom="@+id/addicon_insurancepaper"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="5. กรมธรรม์ประกันภัยรถยนต์"
+                    android:id="@+id/insurancepaper_label"
+                    android:textColor="@color/ColorPrimary"
+
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/insurancepaper_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/insurancepaper_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_insurancepaper"
+                        android:layout_weight="0.5"
+                        android:layout_alignParentTop="true"
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/truck_front_layout"
+                android:layout_below="@+id/insurancepaper_layout"
+
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/truck_front_add"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_below="@+id/truck_front_label"
+                    android:layout_toEndOf="@+id/truck_front_image_layout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addicon_truck_front"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/addlabel_truck_front"
+                        android:layout_alignBottom="@+id/addicon_truck_front"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="6. รูปรถด้านหน้า"
+                    android:id="@+id/truck_front_label"
+                    android:textColor="@color/ColorPrimary"
+
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/truck_front_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/truck_front_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_truck_front"
+                        android:layout_weight="0.5"
+                        android:layout_alignParentTop="true"
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/truck_side_layout"
+                android:layout_below="@+id/truck_front_layout"
+
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/truck_side_add"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_below="@+id/truck_side_label"
+                    android:layout_toEndOf="@+id/truck_side_image_layout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addicon_truck_side"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/addlabel_truck_side"
+                        android:layout_alignBottom="@+id/addicon_truck_side"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="7. รูปรถด้านข้าง"
+                    android:id="@+id/truck_side_label"
+                    android:textColor="@color/ColorPrimary"
+
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/truck_side_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/truck_side_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_truck_side"
+                        android:layout_weight="0.5"
+                        android:layout_alignParentTop="true"
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/truck_back_layout"
+                android:layout_below="@+id/truck_side_layout"
+
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_weight=".5"
+                    android:background="#e5e5e5"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:id="@+id/truck_back_add"
+                    android:onClick="loadImagefromGallery"
+                    android:layout_below="@+id/truck_back_label"
+                    android:layout_toEndOf="@+id/truck_back_image_layout">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/addicon_truck_back"
+                        android:layout_weight="0.5"
+                        android:src="@drawable/photo_add"
+                        android:layout_marginBottom="5dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="เลือกรูป"
+                        android:id="@+id/addlabel_truck_back"
+                        android:layout_alignBottom="@+id/addicon_truck_back"
+                        android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="8. รูปรถด้านหลัง"
+                    android:id="@+id/truck_back_label"
+                    android:textColor="@color/ColorPrimary"
+
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/truck_back_label"
+                    android:layout_marginLeft="30dp"
+                    android:id="@+id/truck_back_image_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:id="@+id/image_truck_back"
+                        android:layout_weight="0.5"
+                        android:layout_alignParentTop="true"
+                        android:background="#e5e5e5" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="ต่อไป"
+            android:id="@+id/button4"
+            android:textColor="#ffffffff"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:onClick="goNext"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_below="@+id/photos_main_layout"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</ScrollView>

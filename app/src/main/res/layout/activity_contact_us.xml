@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactUsActivity"
+    android:clipToPadding="false">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_login_page"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView4"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:elevation="2dp"
+                android:padding="10dp"
+                android:background="#ffffffff">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView12"
+                    android:src="@drawable/phone_icon_color"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginRight="110dp"
+                    android:layout_marginLeft="110dp"
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/line_at_layout"
+                    android:clipToPadding="false"
+                    android:background="#ffffff"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="40dp"
+                    android:layout_below="@+id/imageView12"
+                    android:layout_marginRight="2dp"
+                    android:paddingLeft="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentStart="false"
+                    android:onClick="openLineContact">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="LINE ID: @Khondee"
+                        android:id="@+id/textView24"
+
+                        android:textSize="18dp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_marginLeft="2dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView13" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView13"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/line_at_icon"
+                        android:adjustViewBounds="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/relativeLayout3"
+                    android:background="#ffffff"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:paddingLeft="10dp"
+                    android:layout_below="@+id/line_at_layout"
+                    android:layout_marginBottom="40dp"
+                    android:layout_alignStart="@+id/line_at_layout"
+                    android:layout_alignEnd="@+id/line_at_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="02-101-5xxx"
+                        android:id="@+id/textView27"
+                        android:textSize="18dp"
+                        android:padding="10dp"
+                        android:background="#ffffff"
+                        android:layout_marginLeft="2dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView14" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView14"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/phone_contact_icon"
+                        android:adjustViewBounds="true" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

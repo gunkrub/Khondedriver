@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar_login_page"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView7" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/starting_label"
+            android:layout_alignLeft="@+id/starting_label"
+            android:layout_alignStart="@+id/starting_label"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30sp"
+                android:paddingRight="30sp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:paddingTop="50dp"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/select_starting_layout"
+                    android:onClick="showStartingDialog">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="ต้นทาง"
+                        android:id="@+id/starting_label"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textColor="#559abb"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="ทั่วประเทศ"
+                        android:id="@+id/select_starting_label"
+                        android:layout_below="@+id/starting_label"
+                        android:layout_alignLeft="@+id/starting_label"
+                        android:layout_alignStart="@+id/starting_label"
+         />
+
+                    <ImageView
+                        android:layout_width="15sp"
+                        android:layout_height="22sp"
+                        android:id="@+id/right_arrow1"
+                        android:layout_alignTop="@+id/select_starting_label"
+                        android:layout_toRightOf="@+id/select_starting_label"
+                        android:src="@drawable/right_arrow"
+                        android:layout_marginLeft="5sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@android:color/darker_gray"
+                    android:layout_below="@+id/select_starting_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:id="@+id/relativeLayout2" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/select_destination_layout"
+                    android:onClick="showDestinationDialog"
+                    android:layout_below="@+id/relativeLayout2"
+                    android:layout_alignLeft="@+id/relativeLayout2"
+                    android:layout_alignStart="@+id/relativeLayout2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="ปลายทาง"
+                        android:id="@+id/destination_label"
+                        android:textColor="#559abb"
+                        android:textStyle="bold"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="ทั่วประเทศ"
+                        android:id="@+id/select_destination_label"
+                        android:layout_below="@+id/destination_label"
+                        android:layout_alignLeft="@+id/destination_label"
+                        android:layout_alignStart="@+id/destination_label" />
+
+                    <ImageView
+                        android:layout_width="15sp"
+                        android:layout_height="22sp"
+                        android:id="@+id/right_arrow2"
+                        android:src="@drawable/right_arrow"
+                        android:layout_below="@+id/destination_label"
+                        android:layout_toRightOf="@+id/select_destination_label"
+                        android:layout_toEndOf="@+id/select_destination_label"
+                        android:layout_marginLeft="5sp" />
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="150sp"
+                    android:layout_height="60sp"
+                    android:text="ค้นหางาน"
+                    android:id="@+id/search_job_button"
+                    android:onClick="clickSearch"
+                    android:textColor="#ffffff"
+                    android:layout_alignParentStart="true"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/select_destination_layout"
+                    android:layout_alignEnd="@+id/relativeLayout2"
+                    android:layout_marginTop="60dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Khonde Driver</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_application">ApplicationActivity</string>
+    <string name="title_activity_view_job">ViewJobActivity</string>
+    <string name="website_url">http://khonde.com/mobile_connect/</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_register1">Register1</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
